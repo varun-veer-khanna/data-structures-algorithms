@@ -2,6 +2,7 @@
 ‘+’, ‘-‘ operators and parentheses. 
 Output the simplified string without parentheses.'''
 
+#hello world
 
 def remove_brackets(string):
     result_string=""
