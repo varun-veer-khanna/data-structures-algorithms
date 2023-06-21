@@ -2,7 +2,6 @@
 ‘+’, ‘-‘ operators and parentheses. 
 Output the simplified string without parentheses.'''
 
-
 def remove_brackets(string):
     result_string=""
     sign_stack=[0] # 0 for positive and 1 for negative
