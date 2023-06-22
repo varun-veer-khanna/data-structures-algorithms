@@ -10,21 +10,27 @@ def newNode(data):
     return Node(data)
 
 def flatten_multilevel_linked_list(head, flathead, queue):
-    while(head.next)!=None:
+    while(head)!=None:
         print(head.data)
         flathead=newNode(head.data)
-        temp=flathead
         if head.child!=None:
-            print('Child is ', head.child.data)
             queue.append(head.child)
-        flathead=flathead.next
+        #flathead=flathead.next
         head=head.next
-    while queue:
-        print("hello")
-        head=flathead
-        flatten_multilevel_linked_list(head, temp, queue)
-        queue.pop(0)
-    return head
+    
+    if queue:
+        head=queue.pop(0)
+        flatten_multilevel_linked_list(head, flathead, queue)
+    else:
+        return flathead
+    
+def printList(head): 
+    print("yoyoyoyyoy")
+    if not head: 
+        return
+    while(head): 
+        print("{}".format(head.data), end = " ") 
+        head = head.next
 
 if __name__=='__main__': 
     head=None
@@ -54,4 +60,7 @@ if __name__=='__main__':
 
     flathead=None
     queue=[]
-    flatten_multilevel_linked_list(head, flathead, queue)
+
+    flathead=flatten_multilevel_linked_list(head, flathead, queue)
+
+    printList(flathead)
