@@ -46,7 +46,7 @@ def remove_brackets(string):
     return result_string
             
 
-
+# driver code
 if __name__=='__main__':
     string="a-(b-c-(d+e))-f"
     result_string=remove_brackets(string)
