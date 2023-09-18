@@ -12,10 +12,14 @@ You must not use any built-in exponent function or operator.
 
 class Solution:
     def mySqrt(self, x: int) -> int:
+        # using binary search to find solution in O(logn) time
+        # initializing the variables
         start=0
         end=x
+        # base cases
         if x==0 or x==1:
             return x
+        # establishing the end condition for the loop
         while end>start:
             mid=(start+end)/2
             if int(mid*mid)==x:
@@ -24,10 +28,11 @@ class Solution:
                 end=mid
             else:
                 start=mid
+        # end case
         return int(end)
 
 
-
+# driver code
 if __name__=='__main__':
     obj=Solution()
     x=8
