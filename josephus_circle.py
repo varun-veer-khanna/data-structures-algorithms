@@ -49,5 +49,5 @@ def josephus(n, k):
     return head.data
 
 if __name__ == '__main__':
-    position=josephus(14, 2)
+    position=josephus(7, 3)
     print(position)

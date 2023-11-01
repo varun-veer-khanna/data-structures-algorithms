@@ -1,3 +1,4 @@
+# not done on my own yet
 class Solution:
     def romanToInt(self, s: str) -> int:
         translations = {
